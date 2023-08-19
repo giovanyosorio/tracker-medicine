@@ -1,16 +1,11 @@
-// Define los medicamentos
-const express = require('express');
-const path=require('path');
-const app = express();
 
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'views/index.html'));
-});
+import app from "./app.js";
+import {connectDb} from "./db.js";
 
-app.listen(3000, () => {
-  console.log('Servidor escuchando en http://localhost:3000');
-});
+//connectDb()
 
+app.listen(3000)
+console.log("server on portal",3000);
 
 /*
 let medicamentos = [
